@@ -1,0 +1,10 @@
+{
+    "cliente": {
+        "nombre": "Adrian",
+        "email": "adrian@example.com",
+        "pedidos": [
+            { "id": 1, "producto": "Guitarra", "precio": 500 },
+            { "id": 2, "producto": "Auriculares", "precio": 200 }
+        ]
+    }
+}
