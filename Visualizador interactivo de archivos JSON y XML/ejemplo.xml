@@ -1,0 +1,14 @@
+<cliente>
+  <nombre>Adrian</nombre>
+  <email>adrian@example.com</email>
+  <pedidos>
+    <pedido id="1">
+      <producto>Guitarra</producto>
+      <precio>500</precio>
+    </pedido>
+    <pedido id="2">
+      <producto>Auriculares</producto>
+      <precio>200</precio>
+    </pedido>
+  </pedidos>
+</cliente>

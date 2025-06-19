@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resultado</title>
+    <style>
+        pre {
+            background-color: #f2f2f2;
+            padding: 15px;
+            white-space: pre-wrap;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Resultado del archivo {{ tipo }}</h2>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% else %}
+    <pre>{{ contenido }}</pre> {% endif %}
+    <br>
+    <a href="/">⬅ Volver</a>
+</body>
+
+</html>
