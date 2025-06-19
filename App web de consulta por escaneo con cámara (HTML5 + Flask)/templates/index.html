@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Escanear Código</title>
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+</head>
+
+<body>
+    <h2>📷 Escanea el código del producto</h2>
+    <video id="video" width="300" height="200" autoplay></video>
+    <p id="resultado">Esperando escaneo...</p>
+
+    <script>
+        const codeReader = new ZXing.BrowserBarcodeReader();
+        const video = document.getElementById('video');
+        const resultado = document.getElementById('resultado');
+
+        codeReader.decodeFromVideoDevice(null, 'video', (result, err) => {
+            if (result) {
+                fetch('/buscar', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            codigo: result.text
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            resultado.innerText = "❌ " + data.error;
+                        } else {
+                            resultado.innerText = `✅ ${data.nombre} - ${data.cantidad} und - $${data.precio}`;
+                        }
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>

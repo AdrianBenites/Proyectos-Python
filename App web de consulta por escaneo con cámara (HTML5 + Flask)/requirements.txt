@@ -1,0 +1,18 @@
+flask
+✅ ¿Cómo probarlo?
+Ejecuta python app.py
+
+Abre en tu celular o PC con cámara: http://localhost:5000
+
+Escanea un código (puede ser de un producto real o impreso desde internet)
+
+Verás el nombre, cantidad y precio en pantalla
+
+🔐 Posibles mejoras futuras:
+Agregar login y permisos
+
+Crear etiquetas con códigos para impresión
+
+Registrar venta automáticamente tras escaneo
+
+App móvil nativa con Flutter y cámara
