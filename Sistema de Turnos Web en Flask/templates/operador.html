@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operador</title>
+</head>
+
+<body>
+    <h2>📢 Turno Actual</h2>
+    {% if turno %}
+    <p>Turno: <strong>{{ turno[1] }}</strong></p>
+    <a href="/llamar_turno/{{ turno[0] }}"><button>✅ Atendido</button></a> {% else %}
+    <p>No hay turnos pendientes.</p>
+    {% endif %}
+    <br>
+    <a href="/historial">📜 Ver Historial del Día</a>
+</body>
+
+</html>

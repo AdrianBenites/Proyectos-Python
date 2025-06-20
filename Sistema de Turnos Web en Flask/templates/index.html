@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Turnos</title>
+</head>
+
+<body>
+    <h2>🎟️ Sistema de Turnos</h2>
+    {% if turno_asignado %}
+    <p>Tu número de turno es: <strong>{{ turno_asignado }}</strong></p>
+    {% else %}
+    <form method="POST" action="/tomar_turno">
+        <button type="submit">📥 Tomar Turno</button>
+    </form>
+    {% endif %}
+</body>
+
+</html>
