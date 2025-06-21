@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pantalla de Turnos</title>
+    <meta http-equiv="refresh" content="10">
+    <style>
+        body {
+            text-align: center;
+            font-size: 40px;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        .numero {
+            font-size: 100px;
+            color: #00FFAA;
+        }
+        
+        .punto {
+            font-size: 50px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🔊 Turno Actual</h2>
+    <div id="contenido">
+        <p class="numero" id="turno">--</p>
+        <p class="punto" id="punto">Cargando...</p>
+    </div>
+
+    <audio id="sonido" src="/static/sonido.mp3" autoplay></audio>
+
+    <script>
+        function actualizarTurno() {
+            fetch('/api/turno_actual')
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('turno').textContent = data.numero;
+                    document.getElementById('punto').textContent = data.punto;
+                    if (data.numero !== "--") {
+                        document.getElementById("sonido").play();
+                    }
+                });
+        }
+        setInterval(actualizarTurno, 5000);
+        actualizarTurno();
+    </script>
+</body>
+
+</html>

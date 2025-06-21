@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Historial</title>
+</head>
+
+<body>
+    <h2>📜 Historial de Turnos - {{ fecha }}</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Número</th>
+            <th>Punto</th>
+            <th>Estado</th>
+        </tr>
+        {% for t in turnos %}
+        <tr>
+            <td>{{ t[0] }}</td>
+            <td>{{ t[1] or '-' }}</td>
+            <td>{{ t[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/operador">⬅ Volver</a>
+</body>
+
+</html>

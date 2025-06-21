@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operador</title>
+</head>
+
+<body>
+    <h2>📢 Llamado de Turnos</h2>
+    {% if turno %}
+    <p>Turno pendiente: <strong>{{ turno[1] }}</strong></p>
+    <form method="POST">
+        <input type="hidden" name="id_turno" value="{{ turno[0] }}">
+        <label>Atendido en punto:</label>
+        <select name="punto" required>
+        <option value="Caja 1">Caja 1</option>
+        <option value="Caja 2">Caja 2</option>
+        <option value="Ventanilla 1">Ventanilla 1</option>
+        <option value="Barbería">Barbería</option>
+      </select>
+        <button type="submit">✅ Llamar Turno</button>
+    </form>
+    {% else %}
+    <p>No hay turnos pendientes.</p>
+    {% endif %}
+    <br>
+    <a href="/historial">📜 Ver Historial</a>
+</body>
+
+</html>

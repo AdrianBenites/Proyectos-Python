@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tomar Turno</title>
+</head>
+
+<body>
+    <h2>🎟️ Bienvenido</h2>
+    {% if turno_asignado %}
+    <p>Tu número de turno es: <strong>{{ turno_asignado }}</strong></p>
+    <button onclick="window.print()">🖨 Imprimir</button>
+    <br><br>
+    <a href="/">⬅ Tomar otro</a> {% else %}
+    <form action="/tomar_turno" method="POST">
+        <button type="submit">📥 Tomar Turno</button>
+    </form>
+    {% endif %}
+</body>
+
+</html>
