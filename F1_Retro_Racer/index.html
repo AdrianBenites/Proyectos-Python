@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Retro Racer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🏁 F1 Retro Racer</h1>
+  <p>Puntaje: <span id="score">0</span> | Récord: <span id="highscore">0</span></p>
+  <select id="themeSelector">
+    <option value="ciudad">Ciudad</option>
+    <option value="noche">Noche</option>
+    <option value="pixel">Pixel</option>
+    <option value="desierto">Desierto</option>
+  </select>
+  <div class="road ciudad" id="road">
+    <div id="car"></div>
+  </div>
+  <div class="controls">
+    <button onclick="moveLeft()">⬅️</button>
+    <button onclick="activateTurbo()">⚡</button>
+    <button onclick="moveRight()">➡️</button>
+  </div>
+  <audio id="bg-music" src="musica/chiptune.mp3" autoplay loop></audio>
+  <script src="game.js"></script>
+</body>
+</html>

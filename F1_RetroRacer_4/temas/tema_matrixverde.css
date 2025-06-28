@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+h1 {
+  font-size: 26px;
+  margin: 15px 0;
+  color: #00ff00;
+  text-shadow: 0 0 6px #00ff00;
+}
+canvas {
+  background: #000;
+  border: 2px solid #00ff00;
+  display: block;
+  margin: 15px auto;
+  box-shadow: 0 0 10px #00ff00;
+}
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 6px;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  background: #001100;
+  color: #00ff00;
+  box-shadow: 0 0 8px #00ff00;
+  font-family: monospace;
+  transition: all 0.2s;
+}
+button:active {
+  background: #00ff00;
+  color: #001100;
+  transform: scale(0.95);
+}
+.selector-tema select {
+  background: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 6px 12px;
+  font-family: monospace;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #00ff00;
+}
+.selector-tema label {
+  color: #00ff00;
+  font-weight: bold;
+}

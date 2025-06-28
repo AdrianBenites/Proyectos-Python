@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏎️ F1 Retro Racer</title>
+  <link id="estiloActivo" rel="stylesheet" href="temas/tema_matrixverde.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🏁 F1 Retro Racer</h1>
+  <div class="selector-tema">
+    <label for="temas">🎨 Estilo visual:</label>
+    <select id="temas">
+      <option value="tema_matrixverde.css">Matrix Verde</option>
+    </select>
+  </div>
+  <canvas id="gameCanvas" width="400" height="600"></canvas>
+  <div class="controles">
+    <button onclick="reiniciarJuego()">🔁 Reiniciar</button>
+    <button onclick="activarTurbo()">🚀 Turbo</button>
+  </div>
+  <script src="game.js"></script>
+  <script>
+    const selectTemas = document.getElementById('temas');
+    const estilo = document.getElementById('estiloActivo');
+    selectTemas.addEventListener('change', () => {
+      estilo.href = 'temas/' + selectTemas.value;
+    });
+  </script>
+</body>
+</html>

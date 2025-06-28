@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏎️ F1 RetroRacer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link id="temaCSS" rel="stylesheet" href="temas/tema_matrixverde.css" />
+</head>
+
+<body>
+    <h1>🏁 F1 RetroRacer</h1>
+
+    <div id="contenedorJuego">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div id="hud">
+            <div id="puntaje">Puntaje: 0</div>
+            <div id="monedas">Monedas: 0</div>
+        </div>
+    </div>
+
+    <div class="controles">
+        <button onclick="activarTurbo()">🚀 Activar Turbo</button>
+        <select id="temaSelector" onchange="cambiarTema()">
+      <option value="tema_matrixverde.css">Matrix Verde</option>
+      <option value="tema_noche.css">Modo Noche</option>
+      <option value="tema_desierto.css">Desierto</option>
+      <option value="tema_ciudad.css">Ciudad Retro</option>
+    </select>
+    </div>
+
+    <!-- Música de fondo -->
+    <audio id="musicaFondo" src="musica/fondo.mp3" autoplay loop></audio>
+
+    <!-- Script del juego -->
+    <script src="game.js"></script>
+</body>
+
+</html>

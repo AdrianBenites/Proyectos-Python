@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: #0f0;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+#contenedorJuego {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 600px;
+}
+
+canvas {
+    background: #111;
+    border: 3px solid #0f0;
+    display: block;
+    margin: auto;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+    color: #0f0;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.controles {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #00cc00;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0px 0px 8px #00ff00;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ff00;
+}
+
+select {
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    background: black;
+    color: #0f0;
+    border: 2px solid #0f0;
+    box-shadow: 0px 0px 5px #0f0;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏎️ F1 Retro Racer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>🏁 F1 Retro Racer</h1>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Controles táctiles -->
+    <div class="controles">
+        <div class="fila">
+            <button onclick="presionar('ArrowUp')">⬆️</button>
+        </div>
+        <div class="fila">
+            <button onclick="presionar('ArrowLeft')">⬅️</button>
+            <button onclick="presionar(' ')">🚀</button>
+            <button onclick="presionar('ArrowRight')">➡️</button>
+        </div>
+        <div class="fila">
+            <button onclick="presionar('ArrowDown')">⬇️</button>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="musicaFondo" autoplay loop>
+    <source src="musica/chiptune.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+    <script src="game.js"></script>
+    <script>
+        // Emula teclas para botones táctiles
+        function presionar(tecla) {
+            document.dispatchEvent(new KeyboardEvent('keydown', {
+                key: tecla
+            }));
+            setTimeout(() => {
+                document.dispatchEvent(new KeyboardEvent('keyup', {
+                    key: tecla
+                }));
+            }, 150);
+        }
+    </script>
+</body>
+
+</html>

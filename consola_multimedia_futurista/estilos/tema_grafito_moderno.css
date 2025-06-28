@@ -1,0 +1,50 @@
+QWidget {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QLabel {
+    color: #f0f0f0;
+    font-size: 15px;
+}
+
+QPushButton {
+    background-color: #3c3c3c;
+    border: 1px solid #888;
+    color: #ffffff;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #505050;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+QComboBox {
+    background-color: #3c3c3c;
+    border: 1px solid #aaa;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+QTabWidget::pane {
+    border: 1px solid #555;
+    background-color: #1f1f1f;
+}
+
+QTabBar::tab {
+    background: #333;
+    color: #ccc;
+    padding: 5px;
+    border: 1px solid #666;
+}
+
+QTabBar::tab:selected {
+    background: #888;
+    color: #1f1f1f;
+    font-weight: bold;
+}
